@@ -15,6 +15,6 @@ use Symfony\Component\HttpKernel\Bundle\Bundle;
  *
  * @author André Heeke <andre@nexper.de>
  */
-class RockSolidColumnsBundle extends Bundle
+class NexperColumnsBundle extends Bundle
 {
 }
