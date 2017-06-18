@@ -1,0 +1,24 @@
+.nx_w20 {
+    width: calc(20% - 30px);
+    float: left;
+    height: 80px;
+}
+
+.nx_w25 {
+    width: calc(100% - 30px);
+    float: none;
+}
+@media screen and (min-width: 544px) {
+    .nx_w25 {
+        width: calc(50% - 30px);
+        float: left;
+        height: 80px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .nx_w25 {
+        width: calc(25% - 30px);
+        float: left;
+        height: 80px;
+    }
+}
