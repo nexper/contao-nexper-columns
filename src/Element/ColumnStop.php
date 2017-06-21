@@ -27,13 +27,15 @@ class ColumnStop extends \ContentElement
 	 */
     public function generate()
 	{
-        if (TL_MODE === 'BE') {
+		if (TL_MODE === 'BE') {
             $template = new \BackendTemplate('be_wildcard');
 			$template->title = $this->headline;
 			$template->id = $this->id;
             
             return $template->parse();
 		}
+        
+		return parent::generate();
     }
 
 	/**
@@ -43,7 +45,7 @@ class ColumnStop extends \ContentElement
 	 */
 	public function compile()
 	{
-        $this->Template = new \FrontendTemplate($this->strTemplate);
+		$this->Template = new \FrontendTemplate($this->strTemplate);
         $this->Template->setData($this->arrData);
 	}
 }
