@@ -44,8 +44,12 @@ class ColumnStart extends \ContentElement
             foreach($selectionArr as $size) {
                 $columnLength = $this->arrData['nx_columns_' . $size];            
                 $offsetLength = $this->arrData['nx_columns_offset_' . $size];            
+                
                 array_push($classes, 'col-' . $size . '-' . $columnLength);
-                array_push($classes, 'col-' . $size . '-offset-' . $offsetLength);
+                
+                if($offsetLength != '') {
+                    array_push($classes, 'col-' . $size . '-offset-' . $offsetLength);
+                }
             }
 
             if (!is_array($this->cssID)) {
