@@ -5,7 +5,6 @@
 	"type": "contao-bundle",
 	"homepage": "https://nexper.org/de/contao/plugins/columns",
 	"license": "MIT",
-    "version": "dev-master",
 	"authors": [
 		{
 			"name": "Nexper",
