@@ -32,7 +32,7 @@ class Columns
 	 */
 	public function generatePageHook(\PageModel $page, \LayoutModel $layout, \PageRegular $pageRegular)
 	{
-        $assetsDir = 'bundles/nexpercolumns/frontend/';
+        $assetsDir = 'web/bundles/nexpercolumns/frontend/';
         
         if(!isset($GLOBALS['TL_CONFIG']['nxColumnsFramework'])) {
             $GLOBALS['TL_CONFIG']['nxColumnsFramework'] = 'bootstrap-3';
