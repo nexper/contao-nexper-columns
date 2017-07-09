@@ -10,6 +10,10 @@ if (TL_MODE === 'BE') {
 	$GLOBALS['TL_CSS'][] = 'bundles/nexpercolumns/backend/css/nx_columns.css';
 }
 
+if(!isset($GLOBALS['TL_CONFIG']['nxColumnsFramework'])) {
+    $GLOBALS['TL_CONFIG']['nxColumnsFramework'] = 'bootstrap-3';
+}
+
 // HOOKS
 $GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('Nexper\\NexperColumns\\Columns', 'onloadCallback');
 $GLOBALS['TL_DCA']['tl_content']['config']['onsubmit_callback'][] = array('Nexper\\NexperColumns\\Columns', 'onsubmitCallback');
