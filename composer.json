@@ -1,22 +1,16 @@
 {
     "name": "nexper/contao-nexper-columns",
-    "description": "Responsive grid columns based on Bootstrap",
-    "keywords": ["contao","columns"],
     "type": "contao-bundle",
+    "description": "Adds responsive grid columns to Contao 4",
     "license": "MIT",
     "authors": [
         {
             "name": "Nexper",
-            "homepage": "https://nexper.de/",
-            "role": "Developer"
+            "homepage": "https://github.com/nexper",
         }
     ],
-    "support": {
-        "issues": "https://github.com/nexper/contao-nexper-columns/issues",
-        "source": "https://github.com/nexper/contao-nexper-columns"
-    },
     "require": {
-        "php": ">=5.6",
+        "php": "^5.6|^7.0",
         "contao/core-bundle": "^4.4"
     },
     "require-dev": {
@@ -28,13 +22,17 @@
     },
     "autoload":{
         "psr-4": {
-            "Nexper\\NexperColumns\\": "src/"
+            "Nexper\\ColumnsBundle\\": "src/"
         }
     },
-    "replace":{
-        "contao-legacy/nexper-columns": "self.version"
+    "config": {
+        "preferred-install": "dist"
+    },
+    "support": {
+        "issues": "https://github.com/nexper/contao-nexper-columns/issues",
+        "source": "https://github.com/nexper/contao-nexper-columns"
     },
     "extra":{
-        "contao-manager-plugin": "Nexper\\NexperColumns\\ContaoManagerPlugin"
+        "contao-manager-plugin": "Nexper\\ColumnsBundle\\ContaoManager\\Plugin"
     }
 }
