@@ -13,7 +13,6 @@ use Nexper\ColumnsBundle\NexperColumnsBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
 use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
-use Contao\ManagerPlugin\Routing\RoutingPluginInterface;
 use Symfony\Component\Config\Loader\LoaderResolverInterface;
 use Symfony\Component\HttpKernel\KernelInterface;
 
@@ -22,7 +21,7 @@ use Symfony\Component\HttpKernel\KernelInterface;
  *
  * @author Nexper <https://github.com/nexper>
  */
-class Plugin implements BundlePluginInterface, RoutingPluginInterface
+class Plugin implements BundlePluginInterface
 {
     /**
      * {@inheritdoc}
