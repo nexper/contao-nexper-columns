@@ -11,7 +11,6 @@ if (TL_MODE === 'BE') {
 }
 
 // HOOKS
-$GLOBALS['TL_DCA']['tl_content']['config']['onload_callback'][] = array('Nexper\\NexperColumns\\Columns', 'onloadCallback');
 $GLOBALS['TL_DCA']['tl_content']['config']['onsubmit_callback'][] = array('Nexper\\NexperColumns\\Columns', 'onsubmitCallback');
 
 // nx_container_start
