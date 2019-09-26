@@ -27,27 +27,27 @@ class Clearfix extends \ContentElement
 	 */
     public function generate()
 	{
-		if (TL_MODE === 'BE') 
+		if (TL_MODE === 'BE')
         {
             $template = new \BackendTemplate('be_wildcard');
-            
+
             return $template->parse();
 		}
-        
-        if (!is_array($this->cssID)) 
+
+        if (!is_array($this->cssID))
         {
 			$this->cssID = array('', '');
 		}
-        
-        if($this->arrData['cssID'][1] != '') 
+
+        if($this->arrData['cssID'][1] != '')
         {
-            $this->arrData['cssID'][1] .= ' clearfix';
-        } 
-        else 
-        {
-            $this->arrData['cssID'][1] .= 'clearfix';
+            $this->arrData['cssID'][1] .= ' w-100';
         }
-        
+        else
+        {
+            $this->arrData['cssID'][1] .= 'w-100';
+        }
+
 		return parent::generate();
     }
 

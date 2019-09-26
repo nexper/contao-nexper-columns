@@ -1,11 +1,12 @@
 <?php
 
-namespace Nexper\NexperColumns;
+namespace Nexper\NexperColumns\ContaoManager;
 
 use Contao\CoreBundle\ContaoCoreBundle;
 use Contao\ManagerPlugin\Bundle\BundlePluginInterface;
-use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
 use Contao\ManagerPlugin\Bundle\Config\BundleConfig;
+use Contao\ManagerPlugin\Bundle\Parser\ParserInterface;
+use Nexper\NexperColumns\NexperColumnsBundle;
 
 class ContaoManagerPlugin implements BundlePluginInterface
 {
@@ -16,8 +17,7 @@ class ContaoManagerPlugin implements BundlePluginInterface
 	{
 		return [
 			BundleConfig::create(NexperColumnsBundle::class)
-				->setLoadAfter([ContaoCoreBundle::class])
-				->setReplace(['nexper-columns']),
+				->setLoadAfter([ContaoCoreBundle::class]),
 		];
 	}
 }

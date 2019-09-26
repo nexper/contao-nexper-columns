@@ -7,7 +7,6 @@
  */
 
 // HOOKS
-$GLOBALS['TL_HOOKS']['generatePage'][] = array('Nexper\\NexperColumns\\Columns', 'generatePageHook');
 $GLOBALS['TL_HOOKS']['getContentElement'][] = array('Nexper\\NexperColumns\\Columns', 'getContentElementHook');
 
 // Content elements

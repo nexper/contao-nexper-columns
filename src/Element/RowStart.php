@@ -19,7 +19,7 @@ class RowStart extends \ContentElement
 	 * @var string Template
 	 */
 	protected $strTemplate = 'ce_nx_row_start';
-    
+
     /**
 	 * Parse the template
 	 *
@@ -30,29 +30,25 @@ class RowStart extends \ContentElement
 		if (TL_MODE === 'BE') {
 			return parent::generate();
 		}
-        
+
         if (!is_array($this->cssID)) {
 			$this->cssID = array('', '');
 		}
-        
+
         if($this->arrData['cssID'][1] != '') {
             $this->arrData['cssID'][1] .= ' row';
         } else {
             $this->arrData['cssID'][1] .= 'row';
         }
-        
+
         if($this->arrData['nx_row_no_padding'] === "1") {
-            $this->arrData['cssID'][1] .= ' row-noPadding';
+            $this->arrData['cssID'][1] .= ' no-gutters';
         }
-        
-        if($this->arrData['nx_row_equal_height'] === "1") {
-            $this->arrData['cssID'][1] .= ' row-equalHeight';
+
+        if($this->arrData['nx_row_vertical_center'] === "1") {
+            $this->arrData['cssID'][1] .= ' align-items-center';
         }
-        
-        if($this->arrData['nx_row_equal_height'] === "1" && $this->arrData['nx_row_vertical_center'] === "1") {
-            $this->arrData['cssID'][1] .= ' row-verticalCenter';
-        }
-        
+
 		return parent::generate();
     }
 

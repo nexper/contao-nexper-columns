@@ -17,74 +17,11 @@ namespace Nexper\NexperColumns;
  */
 class Columns
 {
-    public function getContentElementHook($row, $content) 
+    public function getContentElementHook($row, $content)
     {
         return $content;
     }
-    
-    /**
-	 * generatePage hook
-	 *
-	 * @param  \PageModel   $page
-	 * @param  \LayoutModel $layout
-	 * @param  \PageRegular $pageRegular
-	 * @return void
-	 */
-	public function generatePageHook(\PageModel $page, \LayoutModel $layout, \PageRegular $pageRegular)
-	{
-        $assetsDir = 'web/bundles/nexpercolumns/frontend/';
-        
-        if(!isset($GLOBALS['TL_CONFIG']['nxColumnsFramework'])) {
-            $GLOBALS['TL_CONFIG']['nxColumnsFramework'] = 'bootstrap-3';
-        }
-        
-        if($layout->nx_columns_load_reset_css) {
-			$GLOBALS['TL_CSS'][] = $assetsDir . $GLOBALS['TL_CONFIG']['nxColumnsFramework'] . '/css/reset.css||static';
-        }
-        
-		if ($layout->nx_columns_load_css) {            
-			$GLOBALS['TL_CSS'][] = $assetsDir . $GLOBALS['TL_CONFIG']['nxColumnsFramework'] . '/css/columns.css||static';
-		}
-	}
-    
-    /**
-	 * tl_content DCA onload callback
-	 *
-	 * Delete unused select options
-	 *
-	 * @param  \DataContainer $dc Data container
-	 * @return void
-	 */
-    public function onloadCallback(\DataContainer $dc)
-    {
-        /*$selectionObj = \Database::getInstance()
-            ->prepare('SELECT type,nx_columns_selection FROM tl_content WHERE id = ? AND type = ?')
-            ->execute($dc->id, 'nx_column_start');
-        $selectionSizes = array('xs', 'sm', 'md', 'lg', 'xl');
-        
-        if($selectionObj->type === 'nx_column_start' && $selectionObj->nx_columns_selection != '') 
-        {
-            $selectionArr = unserialize($selectionObj->nx_columns_selection);
 
-            foreach($selectionSizes as $selectionItem) 
-            {
-                if(!in_array($selectionItem, $selectionArr)) 
-                { 
-                    unset($GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_' . $selectionItem]);
-                    unset($GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_offset_' . $selectionItem]);
-                }
-            }
-        } 
-        else 
-        {
-            foreach($selectionSizes as $selectionItem) 
-            {
-                unset($GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_' . $selectionItem]);
-                unset($GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_offset_' . $selectionItem]);
-            }
-        }*/
-    }
-    
     /**
 	 * tl_content DCA onsubmit callback
 	 *
@@ -143,13 +80,4 @@ class Columns
 			}
 		}
 	}
-    
-    public function getBackendClass()
-    {
-        if ($GLOBALS['TL_CONFIG']['nxColumnsFramework'] === 'bootstrap-3') {
-            return 'nx_w25';
-        } elseif ($GLOBALS['TL_CONFIG']['nxColumnsFramework'] === 'bootstrap-4') {
-            return 'nx_w20';
-        }
-    }
 }
