@@ -41,7 +41,6 @@ $GLOBALS['TL_DCA']['tl_content']['palettes']['nx_column_start'] = '{type_legend}
 $GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_xs'] = array(
 	'inputType' => 'select',
 	'label' => &$GLOBALS['TL_LANG']['tl_content']['nx_columns_xs'],
-    'default' => 12,
     'options' => $GLOBALS['TL_LANG']['tl_content']['nx_columns_sizes'][$GLOBALS['TL_CONFIG']['nxColumnsFramework']],
 	'eval' => array('tl_class' => 'nx_w20', 'includeBlankOption' => true),
     'sql' => "char(2) NOT NULL default ''",
@@ -51,7 +50,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_sm'] = array(
 	'inputType' => 'select',
 	'label' => &$GLOBALS['TL_LANG']['tl_content']['nx_columns_sm'],
     'options' => $GLOBALS['TL_LANG']['tl_content']['nx_columns_sizes'][$GLOBALS['TL_CONFIG']['nxColumnsFramework']],
-    'default' => 12,
 	'eval' => array('tl_class' => 'nx_w20', 'includeBlankOption' => true),
     'sql' => "char(2) NOT NULL default ''",
 );
@@ -60,7 +58,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_md'] = array(
 	'inputType' => 'select',
 	'label' => &$GLOBALS['TL_LANG']['tl_content']['nx_columns_md'],
     'options' => $GLOBALS['TL_LANG']['tl_content']['nx_columns_sizes'][$GLOBALS['TL_CONFIG']['nxColumnsFramework']],
-    'default' => 12,
 	'eval' => array('tl_class' => 'nx_w20', 'includeBlankOption' => true),
     'sql' => "char(2) NOT NULL default ''",
 );
@@ -69,7 +66,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_lg'] = array(
 	'inputType' => 'select',
 	'label' => &$GLOBALS['TL_LANG']['tl_content']['nx_columns_lg'],
     'options' => $GLOBALS['TL_LANG']['tl_content']['nx_columns_sizes'][$GLOBALS['TL_CONFIG']['nxColumnsFramework']],
-    'default' => 12,
 	'eval' => array('tl_class' => 'nx_w20', 'includeBlankOption' => true),
     'sql' => "char(2) NOT NULL default ''",
 );
@@ -78,7 +74,6 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['nx_columns_xl'] = array(
     'inputType' => 'select',
     'label' => &$GLOBALS['TL_LANG']['tl_content']['nx_columns_xl'],
     'options' => $GLOBALS['TL_LANG']['tl_content']['nx_columns_sizes'][$GLOBALS['TL_CONFIG']['nxColumnsFramework']],
-    'default' => 12,
     'eval' => array('tl_class' => 'nx_w20', 'includeBlankOption' => true),
     'sql' => "char(2) NOT NULL default ''",
 );
